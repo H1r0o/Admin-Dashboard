@@ -1,0 +1,271 @@
+:root {
+    --globalPadding: 30px;
+    --main-color: rgba(25, 146, 212, 1);
+    --main-font-color: rgba(255, 255, 255, 1);
+    --main-orange: rgba(240, 180, 41, 1);
+    --background-color: rgba(226, 232, 240, 1)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+body {
+    height: 100vh;
+}
+
+#mainContainer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 60% 25%;
+    grid-template-rows: auto 40% 40%;
+    grid-template-areas:
+        "sideBar header header"
+        "sideBar main mainRight"
+        "sideBar main mainRight";
+}
+
+/* Sekcja SideBar  */
+
+#sideBar {
+    grid-area: sideBar;
+    background-color: var(--main-color);
+    color: var(--main-font-color);
+    padding-left: var(--globalPadding);
+    height: 112%;
+}
+
+#sideBar>ul>li {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 8px 5px 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+#sideBar>ul>li:nth-child(1),
+#sideBar>ul>li:nth-child(7) {
+    padding-top: 50px;
+}
+
+#sideBar>h1 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#header {
+    grid-area: header;
+
+}
+
+#main {
+    grid-area: main;
+    background-color: var(--background-color);
+}
+
+#mainRight {
+    grid-area: mainRight;
+    background-color: brown;
+}
+
+.icon {
+    height: 1.5rem;
+    padding-right: 10px;
+    align-self: center;
+    fill: aliceblue;
+}
+
+.mainIcon {
+    height: 3rem;
+}
+
+/* Sekcja Header */
+
+#header {
+    padding: 20px 40px 10px 40px;
+    box-shadow: inset;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#bottom {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+#nameTag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nameTag>img {
+    margin-right: 20px;
+}
+
+img {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+#logoBottom {
+    height: 5rem;
+}
+
+#buttonContainer {
+    display: flex;
+    align-items: center;
+
+}
+
+button {
+    background-color: var(--main-color);
+    color: var(--main-font-color);
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    margin-left: 40px;
+}
+
+#shearchBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#shearchBar>input {
+    width: 60%;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+    margin-left: 20px;
+    background-color: var(--background-color);
+}
+
+#shearchBarRight {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerIcon {
+    height: 2rem;
+}
+
+/* Main Content */
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2% 1fr 1fr 1fr;
+    grid-template-areas:
+        "mainHeader mainHeader"
+        "content1 content2"
+        "content3 content4"
+        "content5 content6";
+    gap: 5%;
+    padding: 5%;
+    height: 100%;
+}
+
+#mainHeader {
+    grid-area: mainHeader;
+}
+
+.num1 {
+    grid-area: content1;
+}
+
+.num2 {
+    grid-area: content2;
+}
+
+.num3 {
+    grid-area: content3;
+}
+
+.num4 {
+    grid-area: content4;
+}
+
+.num5 {
+    grid-area: content5;
+}
+
+.num6 {
+    grid-area: content6;
+}
+
+
+.mainContentCard {
+    padding: var(--globalPadding);
+    background-color: white;
+    border-radius: 20px;
+    border-left: 10px solid var(--main-orange);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
+}
+
+.mainContent>h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-bottom: 2%;
+}
+
+.mainContent>h1 {
+    font-size: 1.4rem;
+    padding-bottom: 2%;
+}
+
+.mainContentIcon {
+    height: 1.3rem;
+    padding: 10px;
+}
+
+#mainContentIcons {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+/* Right Content */
+#mainRight {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 115%;
+}
+
+.mainRightContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 30px 30px 0 0;
+
+}
+
+.rightContainerElements {
+    border-bottom: 1px solid black;
+    padding: var(--globalPadding);
+}
+
+#info {
+
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
+}
+
+.last {
+    border: none;
+}
